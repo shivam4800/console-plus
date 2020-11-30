@@ -178,7 +178,7 @@ const Header = (props) => {
                 "email": email,
                 "password": password,
             }
-            axios.post('http://localhost:5000/gamers/signup', payload)
+            axios.post('https://console-plus.herokuapp.com/gamers/signup', payload)
                 .then(function (response) {
                     if (response.status === 200) {
 
@@ -234,7 +234,7 @@ const Header = (props) => {
             "email": email,
             "password": password,
         }
-        axios.post('http://localhost:5000/gamers/login', payload)
+        axios.post('https://console-plus.herokuapp.com/gamers/login', payload)
             .then(function (response) {
                 if (response.status === 200) {
                     alert('Logged in successfully!');
