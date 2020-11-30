@@ -194,8 +194,8 @@ const Header = (props) => {
                         redirectToHome();
                         
                         user();
-                        window.location.reload(false);
-                        user();
+                        //window.location.reload(false);
+                        //user();
                     }
 
                     else {
