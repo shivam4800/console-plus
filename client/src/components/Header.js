@@ -24,7 +24,7 @@ const Header = (props) => {
     let history = useHistory();
     
     const user = () => {
-        axios.get('http://localhost:5000/gamers/me', { headers: { 'token': localStorage.getItem('login_access_token') } })
+        axios.get('https://console-plus.herokuapp.com/gamers/me', { headers: { 'token': localStorage.getItem('login_access_token') } })
             .then(function (response) {
                 if (response.status === 200) {
                     console.log("response", response);
