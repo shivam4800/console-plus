@@ -72,7 +72,7 @@ const Contact = () => {
         }
 
         console.log(feedback);
-        axios.post('http://localhost:5000/feedbacks/addfeedback', feedback)
+        axios.post('https://console-plus.herokuapp.com/feedbacks/addfeedback', feedback)
             .then(res => {
                 console.log(res.data)
                 alert('Feedback Submitted!');
