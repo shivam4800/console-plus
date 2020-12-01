@@ -19,6 +19,7 @@ import { exname, snakeArr, isIn, uid } from './Header';
 
 var Arr2048 = [];
 var exname2 = 'Guest';
+console.log(localStorage.getItem('u_id'));
 var us_id = localStorage.getItem('u_id');
 const A2048Page = () => {
     const usersn = () => {
