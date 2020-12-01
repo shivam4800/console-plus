@@ -79,7 +79,7 @@ const Tetris = () => {
                   "email": exmail,
                   "score": score,
               }
-              axios.put('http://localhost:5000/gamers/addtetris', payload)
+              axios.put('https://console-plus.herokuapp.com/gamers/addtetris', payload)
                   .then(function (response) {
                       if (response.status === 200) { console.log('done'); console.log(response); }
                   }).catch(function (error) {

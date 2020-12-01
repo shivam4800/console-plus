@@ -17,10 +17,10 @@ import { exname, snakeArr, isIn, uid} from './Header';
 
 var snakeArr2 = [];
 var exname2 = 'Guest';
-
+var us_id = localStorage.getItem('u_id');
 const SnakePage = () => {
     const usersn = () => {
-        axios.get('http://localhost:5000/gamers/fetch3/' + uid)
+        axios.get('https://console-plus.herokuapp.com/gamers/fetch3/' + us_id)
             .then(function (response) {
                 if (response.status === 200) {
                     console.log("response on ticpage", response.data);

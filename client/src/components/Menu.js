@@ -135,7 +135,7 @@ class Menu extends Component {
             "username": exname,
             "score": this.state.snakeDots.length,
         }
-        axios.put('http://localhost:5000/gamers/addsnakegame', payload)
+        axios.put('https://console-plus.herokuapp.com/gamers/addsnakegame', payload)
             .then(function (response) {
                 if (response.status === 200) { console.log('done'); console.log(response); }
             }).catch(function (error) {

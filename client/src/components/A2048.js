@@ -391,7 +391,7 @@ function A2048() {
                     "email": exmail,
                     "score": maxscore,
                 }
-                axios.put('http://localhost:5000/gamers/add2048', payload)
+                axios.put('https://console-plus.herokuapp.com/gamers/add2048', payload)
                     .then(function (response) {
                         if (response.status === 200) { console.log('done'); console.log(response); }
                     }).catch(function (error) {

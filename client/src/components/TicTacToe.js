@@ -90,7 +90,7 @@ class TicTacToe extends Component {
                       "email": exmail,
                       "score": winnernum,
                   }
-                  axios.put('http://localhost:5000/gamers/addtic', payload)
+                  axios.put('https://console-plus.herokuapp.com/gamers/addtic', payload)
                       .then(function (response) {
                           if (response.status === 200) { console.log('done'); console.log(response); }
                       }).catch(function (error) {
@@ -113,7 +113,7 @@ class TicTacToe extends Component {
                       "email": exmail,
                       "score": winnernum,
                   }
-                  axios.put('http://localhost:5000/gamers/addtic', payload)
+                  axios.put('https://console-plus.herokuapp.com/gamers/addtic', payload)
                       .then(function (response) {
                           if (response.status === 200) { console.log('done'); console.log(response); }
                       }).catch(function (error) {

@@ -54,7 +54,7 @@ export default function Board() {
                         "email": exmail,
                         "score": player.score,
                     }
-                    axios.put('http://localhost:5000/gamers/addbrick', payload)
+                    axios.put('https://console-plus.herokuapp.com/gamers/addbrick', payload)
                         .then(function (response) {
                             if (response.status === 200) { console.log('done'); console.log(response); }
                         }).catch(function (error) {

@@ -118,7 +118,7 @@ class ChessGame extends React.Component {
                     "username": exname,
                     "score": won,
                 }
-                axios.put('http://localhost:5000/gamers/addchess', payload)
+                axios.put('https://console-plus.herokuapp.com/gamers/addchess', payload)
                     .then(function (response) {
                         if (response.status === 200) { console.log('done'); console.log(response); }
                     }).catch(function (error) {
@@ -138,7 +138,7 @@ class ChessGame extends React.Component {
                     "username": exname,
                     "score": won,
                 }
-                axios.put('http://localhost:5000/gamers/addchess', payload)
+                axios.put('https://console-plus.herokuapp.com/gamers/addchess', payload)
                     .then(function (response) {
                         if (response.status === 200) { console.log('done'); console.log(response); }
                     }).catch(function (error) {
@@ -291,7 +291,7 @@ const ChessGameWrapper = (props) => {
 
 
     // get the gameId from the URL here and pass it to the chessGame component as a prop. 
-    const domainName = 'http://localhost:3000'
+    const domainName = 'https://console-plus.herokuapp.com/'
     const color = React.useContext(ColorContext)
     const { gameid } = useParams()
     const [play] = useSound(chessMove);

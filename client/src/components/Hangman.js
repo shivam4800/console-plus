@@ -77,7 +77,7 @@ class Hangman extends Component {
                     "email": exmail,
                     "score": res,
                 }
-                axios.put('http://localhost:5000/gamers/addhangman', payload)
+                axios.put('https://console-plus.herokuapp.com/gamers/addhangman', payload)
                     .then(function (response) {
                         if (response.status === 200) { console.log('done'); console.log(response); }
                     }).catch(function (error) {
@@ -102,7 +102,7 @@ class Hangman extends Component {
                     "email": exmail,
                     "score": res,
                 }
-                axios.put('http://localhost:5000/gamers/addhangman', payload)
+                axios.put('https://console-plus.herokuapp.com/gamers/addhangman', payload)
                     .then(function (response) {
                         if (response.status === 200) { console.log('done'); console.log(response); }
                     }).catch(function (error) {

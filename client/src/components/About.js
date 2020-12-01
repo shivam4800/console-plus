@@ -87,7 +87,8 @@ const About = () => {
         const dpayload = {
             "email": edit_mail
         }
-        axios.delete('http://localhost:5000/gamers/delete/' + uid)
+        var ud_id = localStorage.getItem('u_id');
+        axios.delete('https://console-plus.herokuapp.com/gamers/delete/' + ud_id)
             .then(function (response) {
                 console.log('in');
                 if (response.status === 200) {
@@ -151,7 +152,7 @@ const About = () => {
                         <div className="container" >
                             <div className="row text-center about-greet"  >
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6 about-hello"  >
-                                    HELLO, {exname}
+                                    HELLO, {edit_name}
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6 about-img" >
                                     <img src={ava} />
