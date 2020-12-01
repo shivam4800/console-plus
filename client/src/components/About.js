@@ -28,8 +28,8 @@ const About = () => {
             });
     }
     user();*/
-    var edit_name = exname;
-    var edit_mail = exmail;
+    var edit_name = localStorage.getItem('uname');
+    var edit_mail = localStorage.getItem('umail');
     console.log("Name before: " + edit_name + " Email bfor: " + edit_mail);
     console.log("Name on About: ", exname);
     const [edit, setEdit] = useState(false);

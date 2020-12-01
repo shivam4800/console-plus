@@ -248,8 +248,8 @@ const Header = (props) => {
                     localStorage.setItem('inside_bool', true);
                     //renderLogout();
                     user();
-                    window.location.reload(false);
-                    user();
+                    //window.location.reload(false);
+                    //user();
                 }
                 else if (response.status === 204) {
                     alert("Email and password do not match");

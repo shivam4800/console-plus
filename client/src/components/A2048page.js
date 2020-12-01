@@ -19,7 +19,7 @@ import { exname, snakeArr, isIn, uid } from './Header';
 
 var Arr2048 = [];
 var exname2 = 'Guest';
-
+var us_id = localStorage.getItem('u_id');
 const A2048Page = () => {
     const usersn = () => {
         axios.get('https://console-plus.herokuapp.com/gamers/fetch3/' + uid)
