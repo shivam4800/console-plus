@@ -291,7 +291,7 @@ const ChessGameWrapper = (props) => {
 
 
     // get the gameId from the URL here and pass it to the chessGame component as a prop. 
-    const domainName = 'https://console-plus.herokuapp.com/'
+    const domainName = 'https://console-plus.herokuapp.com'
     const color = React.useContext(ColorContext)
     const { gameid } = useParams()
     const [play] = useSound(chessMove);
