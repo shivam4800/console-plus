@@ -188,7 +188,7 @@ const Header = (props) => {
                         localStorage.setItem('login_access_token', response.data.token);
                         console.log(response.data.token);
                         //localStorage.setItem('inside', 'tru');
-
+                        console.log(response);
                         localStorage.setItem('inside_bool', true);
                         onCloseSign();
                         redirectToHome();
