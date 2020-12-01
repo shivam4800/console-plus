@@ -194,7 +194,7 @@ const Header = (props) => {
                         redirectToHome();
                         
                         user();
-                        //window.location.reload(false);
+                        window.location.reload(false);
                         //user();
                     }
 
@@ -248,7 +248,7 @@ const Header = (props) => {
                     localStorage.setItem('inside_bool', true);
                     //renderLogout();
                     user();
-                    //window.location.reload(false);
+                    window.location.reload(false);
                     //user();
                 }
                 else if (response.status === 204) {
