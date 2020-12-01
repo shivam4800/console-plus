@@ -22,7 +22,7 @@ var exname2 = 'Guest';
 var us_id = localStorage.getItem('u_id');
 const A2048Page = () => {
     const usersn = () => {
-        axios.get('https://console-plus.herokuapp.com/gamers/fetch3/' + uid)
+        axios.get('https://console-plus.herokuapp.com/gamers/fetch3/' + us_id)
             .then(function (response) {
                 if (response.status === 200) {
                     console.log("response on 2048page", response.data);
