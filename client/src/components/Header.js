@@ -195,7 +195,7 @@ const Header = (props) => {
                         
                         user();
                         window.location.reload(false);
-                        //user();
+                        user();
                     }
 
                     else {
@@ -249,7 +249,7 @@ const Header = (props) => {
                     //renderLogout();
                     user();
                     window.location.reload(false);
-                    //user();
+                    user();
                 }
                 else if (response.status === 204) {
                     alert("Email and password do not match");
