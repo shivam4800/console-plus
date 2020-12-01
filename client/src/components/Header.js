@@ -48,6 +48,8 @@ const Header = (props) => {
                     
 
                     console.log('isIn is', isIn);
+                    window.location.reload(false);
+
                 }
             })
             .catch(function (error) {
@@ -194,8 +196,8 @@ const Header = (props) => {
                         redirectToHome();
                         
                         user();
-                        window.location.reload(false);
-                        user();
+                        //window.location.reload(false);
+                        //user();
                     }
 
                     else {
@@ -248,8 +250,8 @@ const Header = (props) => {
                     localStorage.setItem('inside_bool', true);
                     //renderLogout();
                     user();
-                    window.location.reload(false);
-                    user();
+                    //window.location.reload(false);
+                    //user();
                 }
                 else if (response.status === 204) {
                     alert("Email and password do not match");
