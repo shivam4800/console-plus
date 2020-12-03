@@ -158,6 +158,9 @@ const Contact = () => {
                                 <div>
                                     <button className="contact-form-btn" onClick={onSubmit}  > Submit</button>
                                 </div>
+                                <div>
+                                    <p style={{ color: 'gray', paddingTop: '25px' }}> Created by A Dilna Satheeshan and Shivam Bhasin </p>
+                                </div>
                             </form>
                         </div>
                     </div>

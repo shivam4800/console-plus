@@ -13,15 +13,16 @@
    
 }
 .chess-main-img{
-    background-image: url(../images/chess1.jpg);
+    background-image: url(../images/chess2.jpg);
     background-size: 100% 100%;
    
 
 }
 .chess-main-content{
     background-color: #575e5d63;
-    backdrop-filter: blur(7px);
-    padding-bottom: 50px;
+    backdrop-filter: blur(10px);
+    padding-top: 50px;
+    padding-bottom: 250px;
    
 }
 
@@ -46,5 +47,16 @@
     text-align: center;
     color:#7c8584;
     font-size:20px
+}
+
+.chess-note p {
+    color: #1d867e;
+    font-size: 15px;
+    border-radius: 5px;
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 200px;
+    padding: 30px;
+    border: 2px solid #1d867e;
 }
 

@@ -83,9 +83,14 @@ const BrickPage = () => {
            <div  className="col-12 col-sm-6 col-md-6 col-lg-6" style={{textAlign:'center'}}>
                
                <button onClick={onOpenLogin}  className="break-main-track">Track your Points! </button> 
-           </div>
-           </div>
-           </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div className="break-note text-center">
+                        <p> <i style={{ color: '#1d867e' }} className="sticky note outline icon"> </i> This game is not mobile-friendly yet! </p>
+                    </div>
        </div>
    
        </div>

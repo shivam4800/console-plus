@@ -12,15 +12,15 @@
    
 }
 .tetris-main-img{
-    background-image: url(../images/tetris.jpg);
+    background-image: url(../images/tetris6.jpg);
     background-size: 100% 100%;
    
 
 }
 .tetris-main-content{
     background-color: #575e5d63;
-    backdrop-filter: blur(7px);
-    padding-bottom: 70px;
+    backdrop-filter: blur(15px);
+    padding-bottom: 250px;
    
 }
 

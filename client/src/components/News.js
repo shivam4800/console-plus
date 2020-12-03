@@ -8,7 +8,7 @@ const News = () => {
 
     const [news, setNews] = useState([]);
     const [searchQuery, setSearchQuery] = useState("react");
-    const [url, setUrl] = useState('http://hn.algolia.com/api/v1/search?query=react')
+    const [url, setUrl] = useState('https://hn.algolia.com/api/v1/search?query=react')
     const [loading, setLoading] = useState(false);
     const fetchNews = () => {
         setLoading(true)
@@ -30,7 +30,7 @@ const News = () => {
 
     const handleSubmit = e => {
         e.preventDefault();
-        setUrl(`http://hn.algolia.com/api/v1/search?query=${searchQuery}`);
+        setUrl(`https://hn.algolia.com/api/v1/search?query=${searchQuery}`);
     };
     const showLoading = () => (loading ? <h2 className="news-loading">Loading ... </h2> : "");
     const searchForm = () => (

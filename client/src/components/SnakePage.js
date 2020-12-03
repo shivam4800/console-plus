@@ -83,7 +83,10 @@ const SnakePage = () => {
                <button onClick={onOpenLogin}  className="snake-main-track">Track your Points! </button> 
            </div>
            </div>
-           </div>
+                        </div>
+                        <div className="chess-note text-center">
+                            <p> <i style={{ color: '#1d867e' }} className="sticky note outline icon"> </i> This game is not mobile-friendly yet! </p>
+                        </div>
        </div>
    
        </div>

@@ -133,13 +133,13 @@ const Header = (props) => {
     };
 
     const onNameChange=(e)=>{
-        console.log(e.target.value);
+        
         setName(e.target.value); 
 
     };
 
     const onEmailChange = (e) => {
-        console.log(e.target.value);
+       
         setEmail(e.target.value);
 
     };
@@ -157,7 +157,7 @@ const Header = (props) => {
 
 
     const onPasswordChange = (e) => {
-        console.log(e.target.value);
+        
         setPassword(e.target.value);
     };
    
@@ -221,7 +221,39 @@ const Header = (props) => {
 
     const handleSignupSubmit = (e) => {
         e.preventDefault();
-        sendSignupDetailsToServer()
+        
+        if (document.getElementById('pwd').value == '') {
+            alert('Password cannot be empty')
+        }
+
+        if (document.getElementById('repwd').value == '') {
+            alert('Confirm-Password field cannot be empty')
+        }
+
+        if (document.getElementById('signmail').value == '') {
+            alert('Email cannot be empty')
+        }
+
+        if (document.getElementById('signname').value === '') {
+            alert('Name cannot be empty')
+        }
+
+        if (document.getElementById('pwd').value.length < 7 && document.getElementById('pwd').value.length > 12 ) {
+            alert('Password length should be between 7 and 12!')
+        }
+
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!document.getElementById('signmail').value.match(mailformat)) {
+            alert('Please enter proper email!') ;
+        }
+
+        if (document.getElementById('pwd').value == document.getElementById('repwd').value) {
+            sendSignupDetailsToServer();
+            
+        }
+        else {
+            alert("Passwords don't match! Please recheck!")
+        }
     }
 
     const redirectToHome = () => {
@@ -315,7 +347,7 @@ const Header = (props) => {
                         <div class="ui icon align-social blue-tooltip" data-toggle="tooltip" data-placement="top" title="Youtube" >
                             <a href="https://youtu.be/rUvB2JIwwl4" target="_blank"><i className="youtube icon " ></i></a>
                         </div>
-                        <div class="ui icon align-social blue-tooltip" data-toggle="tooltip" data-placement="top" title="Google" >
+                        <div class="ui icon align-social blue-tooltip" data-toggle="tooltip" data-placement="top" title="Facebook" >
                             <a href="https://youtu.be/rUvB2JIwwl4" target="_blank"><i className="facebook icon " ></i></a>
                         </div>
                         <div class="ui icon align-social blue-tooltip" data-toggle="tooltip" data-placement="top" title="Linkedin" >
@@ -336,16 +368,16 @@ const Header = (props) => {
 
                         <form className="contact-form form-validate3" novalidate="novalidate">
                             <div className="form-group">
-                                <input className="form-control header-input " type="text" name="name" id="name" placeholder="First Name" required="" autocomplete="off" aria-required="true" onChange={onNameChange} value={name} />
+                                <input className="form-control header-input " id="signname" type="text" name="name" placeholder="First Name" required="" autocomplete="off" aria-required="true" style={{ color: 'white' }} onChange={onNameChange} value={name} />
                             </div>
                             <div className="form-group">
-                                <input className="form-control header-input" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" onChange={onEmailChange} value={email} />
+                                <input className="form-control header-input" id="signmail" type="email" name="email" placeholder="E-mail" required="true" autocomplete="off" style={{ color: 'white' }} onChange={onEmailChange} value={email} />
                             </div>
                             <div className="form-group">
-                                <input type="password" name="pass" className="form-control header-input" placeholder="Password" required="" autocomplete="off" aria-required="true" onChange={onPasswordChange} value={password} />
+                                <input type="password" name="pass" id="pwd" className="form-control header-input" placeholder="Password" required="" autocomplete="off" aria-required="true" style={{ color: 'white' }}  onChange={onPasswordChange} value={password} />
                             </div>
                             <div className="form-group">
-                                <input type="password" name="pass" className="form-control header-input" placeholder="  Re-Password" required="" autocomplete="off" aria-required="true" />
+                                <input type="password" name="pass" id="repwd" className="form-control header-input" placeholder="  Re-Password" required="" autocomplete="off" aria-required="true" style={{ color: 'white' }} />
                             </div>
                             <div className="text-center">
                             <input className="btn btn-md btn-info btn-center " id="sign_up" type="button" value="Sign Up" onClick={handleSignupSubmit} />
@@ -365,10 +397,10 @@ const Header = (props) => {
                         <form className="contact-form form-validate3" novalidate="novalidate">
 
                             <div className="form-group">
-                                <input className="form-control header-input" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" onChange={onEmailChange} value={email} />
+                                <input className="form-control header-input" type="email" name="email" placeholder="E-mail" required="" autocomplete="off" aria-required="true" style={{ color: 'white' }} onChange={onEmailChange} value={email} />
                             </div>
                             <div className="form-group">
-                                <input type="password" name="pass" className="form-control header-input" placeholder="Password" required="" autocomplete="off" aria-required="true" onChange={onPasswordChange} value={password} />
+                                <input type="password" name="pass" className="form-control header-input" placeholder="Password" required="" autocomplete="off" aria-required="true" style={{ color: 'white' }} onChange={onPasswordChange} value={password} />
                             </div>
                             <div className="text-center">
                             <input className="btn btn-md btn-info btn-center" id="sign_up" type="button" value="Login" onClick={handleLoginSubmitClick} />

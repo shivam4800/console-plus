@@ -122,29 +122,29 @@ class sideBar extends React.Component {
                 <div className="sidebar-div">
                     <div className="ui  secondary pointing inverted vertical icon menu" style={{ marginTop: '15px' }} ref={this.myRef}>
                         <Link to="/"><a className={this.state.home ? 'active item clr' : 'item clr1'} style={{ marginBottom: '20px', marginTop: '20px' }} onClick={this.onClickhome}>
-                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="World" >
+                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="Home" >
                                 <i class=" home icon"></i>
                             </div>
                         </a></Link>
                         <Link to="/about"><a className={this.state.about ? 'active item clr' : 'item clr1'} style={{ marginBottom: '10px' }} onClick={this.onClickabout}>
-                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="World" >
+                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="About you" >
                                 <i class=" user icon " ></i>
                             </div>
 
                         </a></Link>
                         <Link to="/contact"><a className={this.state.contact ? 'active item clr' : 'item clr1'} style={{ marginBottom: '20px' }} onClick={this.onClickcontact}>
-                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="World" >
+                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="Contact us" >
                                 <i class=" phone icon " ></i>
                             </div>
 
                         </a></Link>
                         <Link to="/search" className={this.state.search ? 'active item clr' : 'item clr1'} style={{ marginBottom: '20px' }} onClick={this.onClicksearch}><a>
-                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="World" >
+                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="Search" >
                                 <i className="search icon"></i>
                             </div>
                         </a></Link>
                         <Link to="/news" className={this.state.news ? 'active item clr' : 'item clr1'} onClick={this.onClicknews}><a>
-                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="World" >
+                            <div class="ui icon blue-tooltip" data-toggle="tooltip" data-placement="right" title="News" >
                                 <i className="book icon"></i>
                             </div>
                         </a></Link>

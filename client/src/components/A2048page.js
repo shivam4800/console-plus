@@ -85,7 +85,10 @@ const A2048Page = () => {
                
                <button onClick={onOpenLogin}  className="a2048-main-track">Track your Points! </button> 
            </div>
+                            
            </div>
+                       
+
            </div>
        </div>
    
@@ -100,7 +103,7 @@ const A2048Page = () => {
                             <h4 className=" chess-modal-data">Your Scores</h4>
 
                             <Chart
-                                title="Data of Last 5 Games"
+                                title="Data of Recent Games"
                                 dataSource={[{
                                     arg: 'Older',
                                     val: Arr2048[val - 5]

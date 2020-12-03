@@ -13,15 +13,16 @@
    
 }
 .tic-main-img{
-    background-image: url(../images/tic.png);
+    background-image: url(../images/tic1.jpg);
     background-size: 100% 100%;
  
 
 }
 .tic-main-content{
     background-color: #3b444363;
-    backdrop-filter: blur(4px);
-    padding-bottom: 70px;
+    backdrop-filter: blur(10px);
+    padding-bottom: 250px;
+    padding-top: 100px;
 }
 
 
