@@ -324,8 +324,8 @@ const Header = (props) => {
                             <div className="header-welcome-div">
                                 <a className="header-welcome">Welcome</a>
                             </div>
-                            <div className="headeritem-login" onClick={handleLogout} style={{ width: '73px'}}>
-                                <a className="header-fonts" >Logout</a>
+                            <div className="headeritem-login" onClick={handleLogout}>
+                                <a className="header-fonts">Logout</a>
 
                             </div>
                         </div>

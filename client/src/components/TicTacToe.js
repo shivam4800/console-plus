@@ -233,9 +233,10 @@ function evaluate(mat, depth) {
 }
 
 function minmax(mat, depth, get_max) {
-  if (hasMovesLeft(mat) === false) {
+    if (hasMovesLeft(mat) === false) {
+        
       return evaluate(mat, depth);
-      console.log('full');
+      
   } 
 
   let val = evaluate(mat, depth);
