@@ -187,12 +187,15 @@ function arrayToMat(squares) {
 function hasMovesLeft(mat) {
   // If it has an empty space, keep playing
   for (let i = 0; i < 3; i++) {
-    for (let j = 0; j < 3; j++) {
-      if (mat[i][j] === "") return true;
+      for (let j = 0; j < 3; j++) {
+          if (mat[i][j] === "") {
+              return true; console.log('not full');
+          }
     }
   }
 
-  return false;
+    return false;
+    console.log('full');
 }
 
 function evaluate(mat, depth) {
@@ -225,12 +228,14 @@ function evaluate(mat, depth) {
   }
 
   // If the game hasn't finished yet
-  return 0;
+    return 0;
+    console.log("not finished")
 }
 
 function minmax(mat, depth, get_max) {
   if (hasMovesLeft(mat) === false) {
-    return evaluate(mat, depth);    
+      return evaluate(mat, depth);
+      console.log('full');
   } 
 
   let val = evaluate(mat, depth);
