@@ -75,7 +75,7 @@ const Contact = () => {
             alert('Contact Number cannot be empty')
         }
 
-        if (document.getElementById('cdesc').value == '') {
+        if (document.getElementById('contact-form-feedback').value == '') {
             alert('Please write something')
         }
 
@@ -87,26 +87,27 @@ const Contact = () => {
         if (!document.getElementById('cmail').value.match(mailformat)) {
             alert('Please enter proper email!');
         }
-        const feedback = {
-            name: name,
-            email: email,
-            number: number,
-            desc: desc
+        else {
+            const feedback = {
+                name: name,
+                email: email,
+                number: number,
+                desc: desc
+            }
+
+            console.log(feedback);
+            axios.post('https://console-plus.herokuapp.com/feedbacks/addfeedback', feedback)
+                .then(res => {
+                    console.log(res.data)
+                    alert('Feedback Submitted!');
+                    onNameSub();
+                    onEmailSub();
+                    onNumberSub();
+                    onDescSub();
+
+
+                });
         }
-
-        console.log(feedback);
-        axios.post('https://console-plus.herokuapp.com/feedbacks/addfeedback', feedback)
-            .then(res => {
-                console.log(res.data)
-                alert('Feedback Submitted!');
-                onNameSub();
-                onEmailSub();
-                onNumberSub();
-                onDescSub();
-
-
-            });
-
 
 
     }
@@ -176,7 +177,7 @@ const Contact = () => {
                                     <input placeholder="Contact No" className="contact-form-input" onChange={onNumberChange} required id='cnum' value={number} />
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-12" >
-                                    <input placeholder="Feedback" className="contact-form-input" id="contact-form-feedback" required id='cdesc' onChange={onDescChange} value={desc} />
+                                    <input placeholder="Feedback" className="contact-form-input" id="contact-form-feedback" required onChange={onDescChange} value={desc} />
                                 </div>
                                 <div>
                                     <button className="contact-form-btn" onClick={onSubmit}  > Submit</button>
