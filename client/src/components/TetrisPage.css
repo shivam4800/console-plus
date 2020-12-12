@@ -9,6 +9,7 @@
     border:2px solid #176860;
     margin-top:100px;
     font-weight: bolder;
+    font-size: 20px;
    
 }
 .tetris-main-img{
@@ -25,14 +26,14 @@
 }
 
 
-.tetris-main-track{
+.tetris-main-track {
     background-color: #4bdbcf00;
     border-radius: 5px;
-    padding:10px;
+    padding: 10px;
     color: #0f4640;
     transition: 1s;
-    margin-top:100px;
-    border:2px solid #12554e;
+    margin-top: 100px;
+    border: 2px solid #12554e;
     font-weight: bolder;
-    
+    font-size: 20px; 
 }

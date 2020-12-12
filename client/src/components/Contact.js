@@ -63,7 +63,30 @@ const Contact = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
+        if (document.getElementById('cname').value == '') {
+            alert('Name cannot be empty')
+        }
 
+        if (document.getElementById('cmail').value == '') {
+            alert('Mail cannot be empty')
+        }
+
+        if (document.getElementById('cnum').value == '') {
+            alert('Contact Number cannot be empty')
+        }
+
+        if (document.getElementById('cdesc').value == '') {
+            alert('Please write something')
+        }
+
+        if (document.getElementById('cnum').value.length != 10) {
+            alert('Number length should be 10!')
+        }
+
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!document.getElementById('cmail').value.match(mailformat)) {
+            alert('Please enter proper email!');
+        }
         const feedback = {
             name: name,
             email: email,
@@ -144,16 +167,16 @@ const Contact = () => {
                         <div>
                             <form>
                                 <div className="col-12 col-sm-6 col-md-5 col-lg-6" >
-                                    <input placeholder="Name" className="contact-form-input" onChange={onNameChange} value={name} />
+                                    <input placeholder="Name" className="contact-form-input" onChange={onNameChange} required id='cname' value={name} />
                                 </div>
                                 <div className="col-12 col-sm-6 col-md-6 col-lg-6" >
-                                    <input placeholder="Email" className="contact-form-input" onChange={onEmailChange} value={email} />
+                                    <input placeholder="Email" className="contact-form-input" onChange={onEmailChange} required id='cmail' value={email} />
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-12" >
-                                    <input placeholder="Contact No" className="contact-form-input" onChange={onNumberChange} value={number} />
+                                    <input placeholder="Contact No" className="contact-form-input" onChange={onNumberChange} required id='cnum' value={number} />
                                 </div>
                                 <div className="col-12 col-sm-12 col-md-12 col-lg-12" >
-                                    <input placeholder="Feedback" className="contact-form-input" id="contact-form-feedback" onChange={onDescChange} value={desc} />
+                                    <input placeholder="Feedback" className="contact-form-input" id="contact-form-feedback" required id='cdesc' onChange={onDescChange} value={desc} />
                                 </div>
                                 <div>
                                     <button className="contact-form-btn" onClick={onSubmit}  > Submit</button>

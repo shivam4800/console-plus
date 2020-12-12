@@ -74,7 +74,7 @@ class CreateNewGame extends React.Component {
                                 ref={this.textArea}
                                 onInput={this.typingUserName}></input>
                             <div>
-                                <button className="chess-submit"
+                                    <button className="chess-submit" style={{marginBottom: '300px'}}
 
                                     disabled={!(this.state.inputText.length > 0)}
                                     onClick={() => {

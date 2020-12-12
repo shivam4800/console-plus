@@ -1,16 +1,15 @@
 .tic-main-play {
-    background-color:rgba(255, 255, 255, 0);
-    border:none;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
     border-radius: 5px;
-    padding:10px;
-    width:26%;
-    color:#14665f;
+    padding: 10px;
+    width: 26%;
+    color: #0d4742;
     transition: 1s;
-    border:2px solid #0d4742;
-    margin-top:100px;
-   
+    border: 2px solid #0d4742;
+    margin-top: 100px;
+    font-size: 20px;
     font-weight: bolder;
-   
 }
 .tic-main-img{
     background-image: url(../images/tic1.jpg);
@@ -26,14 +25,14 @@
 }
 
 
-.tic-main-track{
+.tic-main-track {
     background-color: #4bdbcf00;
     border-radius: 5px;
-    padding:10px;
-    color: #14665f;
+    padding: 10px;
+    color: #0d4742;
     transition: 1s;
-    margin-top:100px;
-    border:2px solid #0d4742;
+    margin-top: 100px;
+    border: 2px solid #0d4742;
     font-weight: bolder;
-    
+    font-size: 20px;
 }

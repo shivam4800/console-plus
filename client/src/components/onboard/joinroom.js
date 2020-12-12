@@ -41,14 +41,14 @@ class JoinRoom extends React.Component {
                 </React.Fragment>
             :
             <div className="container">
-            <div className="text-center">
+                            <div className="text-center">
              <h1  className="chess-title-title" style={{textAlign: "center",paddingTop:'130px'}}>Your Username:</h1>
              
              <input className=" chess-input"
                     ref = {this.textArea}
                     onInput = {this.typingUserName}></input>
              <div>  
-             <button className="chess-submit" 
+                                    <button className="chess-submit" style={{ marginBottom: '300px' }}
                  
                  disabled = {!(this.state.inputText.length > 0)} 
                  onClick = {() => {
