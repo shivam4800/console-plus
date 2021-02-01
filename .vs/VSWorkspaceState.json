@@ -5,12 +5,12 @@
     "\\client\\src",
     "\\client\\src\\components",
     "\\client\\src\\components\\chess",
-    "\\client\\src\\components\\chess\\assets",
-    "\\client\\src\\components\\chess\\ui",
-    "\\client\\src\\components\\games",
-    "\\client\\src\\components\\games\\breakout",
+    "\\client\\src\\components\\chess\\model",
+    "\\client\\src\\components\\connection",
+    "\\client\\src\\components\\context",
+    "\\client\\src\\components\\onboard",
     "\\client\\src\\utils"
   ],
-  "SelectedNode": "\\client\\src\\components\\TicTacToe.js",
+  "SelectedNode": "\\client\\src\\components\\Contact.js",
   "PreviewInSolutionExplorer": false
 }
